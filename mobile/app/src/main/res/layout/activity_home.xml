@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical">
+
+    <!-- ── Topbar ── -->
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/surface_white"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <!-- Brand mark N -->
+        <FrameLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_brand_mark">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="N"
+                android:textColor="@color/text_on_dark"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:text="@string/brand_name"
+            android:textColor="@color/navy"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Avatar initials -->
+        <FrameLayout
+            android:id="@+id/avatarContainer"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@drawable/bg_icon_circle">
+            <TextView
+                android:id="@+id/tvAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="?"
+                android:textColor="@color/primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ── Scrollable body ── -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="24dp">
+
+            <!-- Eyebrow -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_eyebrow"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Welcome card (navy) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_welcome_card"
+                android:orientation="vertical"
+                android:paddingLeft="22dp"
+                android:paddingRight="22dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BIENVENUE"
+                    android:textColor="@color/text_on_dark_subtle"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tvWelcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bienvenue !"
+                    android:textColor="@color/text_on_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_balance_label"
+                    android:textColor="@color/text_on_dark_muted"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tvBalance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.000 TND"
+                    android:textColor="@color/text_on_dark"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Comptes card -->
+            <LinearLayout
+                android:id="@+id/btnAccounts"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icon_circle"
+                    android:layout_marginRight="14dp">
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_bank"
+                        android:contentDescription="@string/nav_accounts" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nav_accounts"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Consulter vos comptes bancaires"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Objectifs card -->
+            <LinearLayout
+                android:id="@+id/btnObjectives"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icon_circle"
+                    android:layout_marginRight="14dp">
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_target"
+                        android:contentDescription="@string/nav_objectives" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nav_objectives"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gérer vos objectifs financiers"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Profil card -->
+            <LinearLayout
+                android:id="@+id/btnProfile"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icon_circle"
+                    android:layout_marginRight="14dp">
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_user"
+                        android:contentDescription="@string/nav_profile" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nav_profile"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Informations personnelles et financières"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Security note -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_security_note"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="14dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_shield"
+                    android:layout_marginRight="12dp"
+                    android:contentDescription="Sécurisé" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Accès sécurisé"
+                        android:textColor="#3D6B50"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Session protégée"
+                        android:textColor="#779182"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Logout -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/nav_logout"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ── Bottom Navigation ── -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/surface_white"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/text_secondary"
+        app:itemTextColor="@color/text_secondary" />
+
+</LinearLayout>

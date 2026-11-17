@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Gestion Bancaire</string>
+    <string name="brand_name">Gestion bancaire</string>
+    <string name="brand_mark">N</string>
+
+    <!-- Auth -->
+    <string name="login_eyebrow">ESPACE FINANCIER PERSONNEL</string>
+    <string name="login_title">Bon retour parmi nous</string>
+    <string name="login_subtitle">Connectez-vous pour consulter votre situation financière.</string>
+    <string name="register_title">Créer votre espace</string>
+    <string name="register_subtitle">Quelques informations suffisent pour commencer.</string>
+    <string name="label_email">Adresse e-mail</string>
+    <string name="label_password">Mot de passe</string>
+    <string name="label_nom">Nom</string>
+    <string name="label_prenom">Prénom</string>
+    <string name="hint_email">Entrez votre e-mail</string>
+    <string name="hint_password">Entrez votre mot de passe</string>
+    <string name="hint_nom">Votre nom</string>
+    <string name="hint_prenom">Votre prénom</string>
+    <string name="hint_password_new">8 car. min., maj., min., chiffre</string>
+    <string name="btn_login">Se connecter</string>
+    <string name="btn_register">Créer mon compte</string>
+    <string name="go_register">Nouveau sur Gestion bancaire ? Créer un compte</string>
+    <string name="go_login">Déjà inscrit ? Se connecter</string>
+    <string name="auth_footer">Connexion sécurisée · Données hébergées par votre établissement</string>
+
+    <!-- Home -->
+    <string name="home_eyebrow">ESPACE FINANCIER PERSONNEL</string>
+    <string name="home_balance_label">Solde total estimé</string>
+    <string name="nav_dashboard">Vue d\'ensemble</string>
+    <string name="nav_accounts">Mes comptes</string>
+    <string name="nav_objectives">Mes objectifs</string>
+    <string name="nav_profile">Mon profil</string>
+    <string name="nav_logout">Se déconnecter</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Mon Profil</string>
+    <string name="section_personal">Informations personnelles</string>
+    <string name="section_financial">Informations financières</string>
+    <string name="label_phone">Numéro de téléphone</string>
+    <string name="label_income">Revenu mensuel (TND)</string>
+    <string name="label_situation">Situation professionnelle</string>
+    <string name="hint_phone">Ex : 0600000000</string>
+    <string name="hint_income">Ex : 1 500</string>
+    <string name="hint_situation">Salarié, Freelance, Étudiant…</string>
+    <string name="btn_save_personal">Enregistrer</string>
+    <string name="btn_save_financial">Enregistrer</string>
+    <string name="btn_back">Retour</string>
+
+    <!-- Objectives -->
+    <string name="objectives_title">Mes Objectifs Financiers</string>
+    <string name="objectives_subtitle">Sélectionnez un ou plusieurs objectifs</string>
+    <string name="btn_save_objectives">Enregistrer ma sélection</string>
+</resources>

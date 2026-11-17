@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Profile screen – mirrors web profile page:
+  • Topbar with back arrow + "Mon Profil" title
+  • Section cards: Informations personnelles / financières
+  • Each section in a white card with a section header
+  • Outlined inputs
+  • Primary save buttons per section
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical">
+
+    <!-- ── Topbar ── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/surface_white"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp" android:paddingRight="16dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Retour"
+            android:textColor="@color/primary"
+            android:textSize="13sp"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/profile_title"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Placeholder to balance the row -->
+        <Space android:layout_width="80dp" android:layout_height="1dp" />
+    </LinearLayout>
+
+    <!-- ── Progress bar ── -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:indeterminate="true"
+        style="@style/Widget.Material3.LinearProgressIndicator"
+        android:visibility="gone" />
+
+    <!-- ── Scrollable content ── -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="18dp" android:paddingRight="18dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp">
+
+            <!-- ══ Section: Informations personnelles ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <!-- Card header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="18dp" android:paddingRight="18dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/section_personal"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mettez à jour vos coordonnées"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/card_border" />
+
+                <!-- Form fields -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="18dp" android:paddingRight="18dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_nom"
+                        android:textColor="@color/text_label"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etNom"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_input"
+                        android:hint="@string/hint_nom"
+                        android:inputType="textPersonName"
+                        android:autofillHints="familyName"
+                        android:paddingLeft="14dp" android:paddingRight="14dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_muted"
+                        android:layout_marginBottom="14dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_prenom"
+                        android:textColor="@color/text_label"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etPrenom"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_input"
+                        android:hint="@string/hint_prenom"
+                        android:inputType="textPersonName"
+                        android:autofillHints="givenName"
+                        android:paddingLeft="14dp" android:paddingRight="14dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_muted"
+                        android:layout_marginBottom="14dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_email"
+                        android:textColor="@color/text_label"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_input"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress"
+                        android:autofillHints="emailAddress"
+                        android:paddingLeft="14dp" android:paddingRight="14dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_muted"
+                        android:layout_marginBottom="14dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_phone"
+                        android:textColor="@color/text_label"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etTelephone"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_input"
+                        android:hint="@string/hint_phone"
+                        android:inputType="phone"
+                        android:autofillHints="phoneNumber"
+                        android:paddingLeft="14dp" android:paddingRight="14dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_muted"
+                        android:layout_marginBottom="18dp" />
+
+                    <Button
+                        android:id="@+id/btnSavePersonal"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_primary_button"
+                        android:text="@string/btn_save_personal"
+                        android:textColor="@color/text_on_dark"
+                        android:textSize="14sp"
+                        style="?attr/materialButtonStyle" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══ Section: Informations financières ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical">
+
+                <!-- Card header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="18dp" android:paddingRight="18dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/section_financial"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Revenu et situation professionnelle"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/card_border" />
+
+                <!-- Form fields -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="18dp" android:paddingRight="18dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_income"
+                        android:textColor="@color/text_label"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etRevenuMensuel"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_input"
+                        android:hint="@string/hint_income"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="14dp" android:paddingRight="14dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_muted"
+                        android:layout_marginBottom="14dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_situation"
+                        android:textColor="@color/text_label"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etSituationPro"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_input"
+                        android:hint="@string/hint_situation"
+                        android:inputType="textCapSentences"
+                        android:paddingLeft="14dp" android:paddingRight="14dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_muted"
+                        android:layout_marginBottom="18dp" />
+
+                    <Button
+                        android:id="@+id/btnSaveFinancial"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_primary_button"
+                        android:text="@string/btn_save_financial"
+                        android:textColor="@color/text_on_dark"
+                        android:textSize="14sp"
+                        style="?attr/materialButtonStyle" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
