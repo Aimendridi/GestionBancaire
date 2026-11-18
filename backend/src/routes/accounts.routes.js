@@ -14,7 +14,11 @@ const toDto = (r) => ({
   type: r.type,
   soldeInitial: Number(r.solde_initial),
   dateCreation: r.date_creation,
+  solde: r.solde === undefined ? Number(r.solde_initial) : Number(r.solde),
+  nbTransactions: Number(r.nb_transactions || 0),
 });
+const accountSelect = `SELECT c.*, c.solde_initial + COALESCE(SUM(CASE WHEN t.type='REVENU' THEN t.montant WHEN t.type='DEPENSE' THEN -t.montant ELSE 0 END),0) solde, COUNT(t.id) nb_transactions FROM comptes_financiers c LEFT JOIN transactions t ON t.compte_id=c.id`;
+const accountGroupBy = ' GROUP BY c.id,c.utilisateur_id,c.nom,c.type,c.solde_initial,c.date_creation';
 
 const createSchema = z.object({
   nom: z.string().trim().min(1, 'Le nom est obligatoire').max(100),
@@ -30,19 +34,19 @@ router.post('/', validate(createSchema), asyncHandler(async (req, res) => {
     'INSERT INTO comptes_financiers (utilisateur_id, nom, type, solde_initial) VALUES (?, ?, ?, ?)',
     [req.user.id, nom, type, soldeInitial]
   );
-  const [[row]] = await pool.query('SELECT * FROM comptes_financiers WHERE id = ?', [r.insertId]);
+  const [[row]] = await pool.query(`${accountSelect} WHERE c.id = ?${accountGroupBy}`, [r.insertId]);
   res.status(201).json(toDto(row));
 }));
 
 // GET /api/accounts
 router.get('/', asyncHandler(async (req, res) => {
-  const [rows] = await pool.query('SELECT * FROM comptes_financiers WHERE utilisateur_id = ? ORDER BY id', [req.user.id]);
+  const [rows] = await pool.query(`${accountSelect} WHERE c.utilisateur_id = ?${accountGroupBy} ORDER BY c.id`, [req.user.id]);
   res.json(rows.map(toDto));
 }));
 
 // GET /api/accounts/:id
 router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
-  const [rows] = await pool.query('SELECT * FROM comptes_financiers WHERE id = ? AND utilisateur_id = ?', [req.params.id, req.user.id]);
+  const [rows] = await pool.query(`${accountSelect} WHERE c.id = ? AND c.utilisateur_id = ?${accountGroupBy}`, [req.params.id, req.user.id]);
   if (!rows.length) throw new HttpError(404, 'Compte introuvable');
   res.json(toDto(rows[0]));
 }));
@@ -62,7 +66,7 @@ router.put('/:id(\\d+)', validate(updateSchema), asyncHandler(async (req, res) =
     [...vals, req.params.id, req.user.id]
   );
   if (!r.affectedRows) throw new HttpError(404, 'Compte introuvable');
-  const [[row]] = await pool.query('SELECT * FROM comptes_financiers WHERE id = ?', [req.params.id]);
+  const [[row]] = await pool.query(`${accountSelect} WHERE c.id = ?${accountGroupBy}`, [req.params.id]);
   res.json(toDto(row));
 }));
 

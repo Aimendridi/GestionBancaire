@@ -1,0 +1,1 @@
+describe('balance formula',()=>{test('solde initial + revenus - dépenses',()=>{const balance=(initial,income,expense)=>Number((initial+income-expense).toFixed(2));expect(balance(100,250.5,20.27)).toBe(330.23);});});

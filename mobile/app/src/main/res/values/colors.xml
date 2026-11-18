@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand palette (mirrors web styles.scss) -->
+    <color name="primary">#174EA6</color>
+    <color name="primary_light">#EDF4FF</color>
+    <color name="navy">#102B4E</color>
+    <color name="navy_dark">#153B68</color>
+    <color name="navy_mid">#243A56</color>
+
+    <!-- Text -->
+    <color name="text_primary">#182433</color>
+    <color name="text_secondary">#718096</color>
+    <color name="text_muted">#98A4B1</color>
+    <color name="text_label">#46596C</color>
+    <color name="text_link">#174EA6</color>
+    <color name="text_on_dark">#FFFFFF</color>
+    <color name="text_on_dark_muted">#CBD9EA</color>
+    <color name="text_on_dark_subtle">#BDD4F4</color>
+
+    <!-- Surfaces -->
+    <color name="page_background">#F5F7FA</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="card_border">#E8EDF3</color>
+
+    <!-- Icon bg -->
+    <color name="icon_bg">#EDF4FF</color>
+
+    <!-- Status -->
+    <color name="success_bg">#EAF7EE</color>
+    <color name="success_text">#25804B</color>
+    <color name="error_bg">#FFF0EF</color>
+    <color name="error_text">#C33D32</color>
+
+    <!-- Legacy required by adaptive icon -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

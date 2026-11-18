@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Brand mark: blue rounded square with centered "N" letter, matches web .brand-mark -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="9dp" />
+            <solid android:color="#174EA6" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="center" />
+    </item>
+</layer-list>

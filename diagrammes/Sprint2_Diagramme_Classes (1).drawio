@@ -1,0 +1,207 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram name="Classes - Sprint 2" id="d1">
+    <mxGraphModel dx="1578" dy="938" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TableauDeBord" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=26;horizontal=1;html=1;whiteSpace=wrap;" value="TableauDeBord" vertex="1">
+          <mxGeometry height="104" width="300" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TableauDeBorda" parent="TableauDeBord" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="- soldeGlobal : double&lt;br&gt;- dernieresTransactions : List&lt;Transaction&gt;" vertex="1">
+          <mxGeometry height="44" width="300" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TableauDeBordl" parent="TableauDeBord" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="300" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TableauDeBordm" parent="TableauDeBord" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="+ charger()" vertex="1">
+          <mxGeometry height="26" width="300" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="Client" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=26;horizontal=1;html=1;whiteSpace=wrap;" value="Client" vertex="1">
+          <mxGeometry height="68" width="260" x="420" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Clienta" parent="Client" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Clientl" parent="Client" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="Clientm" parent="Client" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="+ calculerSoldeGlobal() : double" vertex="1">
+          <mxGeometry height="26" width="260" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="CompteFinancier" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=26;horizontal=1;html=1;whiteSpace=wrap;" value="CompteFinancier" vertex="1">
+          <mxGeometry height="140" width="260" x="420" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="CompteFinanciera" parent="CompteFinancier" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="- id : int&lt;br&gt;- nom : String&lt;br&gt;- type : TypeCompte&lt;br&gt;- soldeInitial : double" vertex="1">
+          <mxGeometry height="80" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="CompteFinancierl" parent="CompteFinancier" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="CompteFinancierm" parent="CompteFinancier" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="+ calculerSolde() : double" vertex="1">
+          <mxGeometry height="26" width="260" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="Transaction" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=26;horizontal=1;html=1;whiteSpace=wrap;" value="Transaction" vertex="1">
+          <mxGeometry height="194" width="260" x="420" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="Transactiona" parent="Transaction" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="- id : int&lt;br&gt;- montant : double&lt;br&gt;- date : Date&lt;br&gt;- libelle : String&lt;br&gt;- type : TypeTransaction" vertex="1">
+          <mxGeometry height="98" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Transactionl" parent="Transaction" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="Transactionm" parent="Transaction" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="+ creer()&lt;br&gt;+ modifier()&lt;br&gt;+ supprimer()" vertex="1">
+          <mxGeometry height="62" width="260" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="Categorie" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=26;horizontal=1;html=1;whiteSpace=wrap;" value="Categorie" vertex="1">
+          <mxGeometry height="104" width="240" x="40" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="Categoriea" parent="Categorie" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="- id : int&lt;br&gt;- nom : String&lt;br&gt;- type : TypeTransaction" vertex="1">
+          <mxGeometry height="62" width="240" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Categoriel" parent="Categorie" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="240" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="Categoriem" parent="Categorie" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="8" width="240" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="TypeTransaction" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=44;horizontal=1;html=1;whiteSpace=wrap;" value="«enumeration»&lt;br&gt;TypeTransaction" vertex="1">
+          <mxGeometry height="104" width="200" x="770" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="TypeTransactiona" parent="TypeTransaction" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="REVENU&lt;br&gt;DEPENSE" vertex="1">
+          <mxGeometry height="44" width="200" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="TypeTransactionl" parent="TypeTransaction" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="TypeTransactionm" parent="TypeTransaction" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="ImportReleve" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=26;horizontal=1;html=1;whiteSpace=wrap;" value="ImportReleve" vertex="1">
+          <mxGeometry height="212" width="260" x="800" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="ImportRelevea" parent="ImportReleve" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="- id : int&lt;br&gt;- nomFichier : String&lt;br&gt;- dateImport : Date&lt;br&gt;- nbLignesImportees : int&lt;br&gt;- nbLignesInvalides : int" vertex="1">
+          <mxGeometry height="98" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ImportRelevel" parent="ImportReleve" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="ImportRelevem" parent="ImportReleve" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="+ importerCSV(f : Fichier)&lt;br&gt;+ previsualiser()&lt;br&gt;+ valider()&lt;br&gt;+ recapitulatif()" vertex="1">
+          <mxGeometry height="80" width="260" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="LigneImport" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=26;horizontal=1;html=1;whiteSpace=wrap;" value="LigneImport" vertex="1">
+          <mxGeometry height="158" width="240" x="1140" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="LigneImporta" parent="LigneImport" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="- numeroLigne : int&lt;br&gt;- date : Date&lt;br&gt;- libelle : String&lt;br&gt;- montant : double&lt;br&gt;- valide : boolean&lt;br&gt;- messageErreur : String" vertex="1">
+          <mxGeometry height="116" width="240" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LigneImportl" parent="LigneImport" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="240" y="142" as="geometry" />
+        </mxCell>
+        <mxCell id="LigneImportm" parent="LigneImport" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;html=1;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="8" width="240" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontStyle=2;" value="Gris : classes du Sprint 1 réutilisées (Client, CompteFinancier). Bleu : nouvelles classes du Sprint 2." vertex="1">
+          <mxGeometry height="60" width="300" x="800" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x1" edge="1" parent="1" source="Client" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=none;" target="TableauDeBord" value="consulte">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x1s" connectable="0" parent="x1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x1t" connectable="0" parent="x1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x2" edge="1" parent="1" source="Client" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;" target="CompteFinancier" value="détient">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x2s" connectable="0" parent="x2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x2t" connectable="0" parent="x2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x3" edge="1" parent="1" source="CompteFinancier" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;" target="Transaction" value="enregistre">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x3s" connectable="0" parent="x3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x3t" connectable="0" parent="x3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x4" edge="1" parent="1" source="Transaction" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=none;" target="Categorie" value="classée dans">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x4s" connectable="0" parent="x4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="*" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x4t" connectable="0" parent="x4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x5" edge="1" parent="1" source="Transaction" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;" target="TypeTransaction" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x6" edge="1" parent="1" source="ImportReleve" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=none;" target="Transaction" value="génère">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x6s" connectable="0" parent="x6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x6t" connectable="0" parent="x6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x7" edge="1" parent="1" source="ImportReleve" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;" target="LigneImport" value="contient">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x7s" connectable="0" parent="x7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x7t" connectable="0" parent="x7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x8" edge="1" parent="1" source="ImportReleve" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=none;" target="CompteFinancier" value="cible">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x8s" connectable="0" parent="x8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="*" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x8t" connectable="0" parent="x8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

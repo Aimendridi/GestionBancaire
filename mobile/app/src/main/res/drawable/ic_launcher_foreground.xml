@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- App launcher foreground: white "N" letter, matches web brand-mark -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!--
+      "N" letter drawn as a path centred in the 108×108 safe-zone (inner 72px)
+      Vertices:  top-left corner = (28,26), top-right = (80,26)
+      The letter N: left vertical bar, diagonal, right vertical bar
+    -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="
+          M32,30 L32,78 L40,78 L40,46 L68,78 L76,78 L76,30 L68,30 L68,62 L40,30 Z
+        " />
+</vector>

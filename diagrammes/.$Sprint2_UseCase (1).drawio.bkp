@@ -1,0 +1,133 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram name="Use Case - Sprint 2" id="d1">
+    <mxGraphModel dx="1028" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=14;fillColor=none;strokeWidth=2;" value="Application intelligente de gestion bancaire personnelle — Sprint 2" vertex="1">
+          <mxGeometry height="1130" width="980" x="190" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="A1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;" value="Client (Utilisateur)" vertex="1">
+          <mxGeometry height="80" width="40" x="70" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="gBM04" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontStyle=1;fillOpacity=45;" value="BM04 — Gestion des revenus et dépenses" vertex="1">
+          <mxGeometry height="256" width="920" x="220" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gBM05" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontStyle=1;fillOpacity=45;" value="BM05 — Import des relevés bancaires" vertex="1">
+          <mxGeometry height="326" width="920" x="220" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="gBM06" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontStyle=1;fillOpacity=45;" value="BM06 — Consultation et recherche des transactions" vertex="1">
+          <mxGeometry height="186" width="920" x="220" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="gBM07" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontStyle=1;fillOpacity=45;" value="BM07 — Suivi des soldes" vertex="1">
+          <mxGeometry height="186" width="920" x="220" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="gBM30" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontStyle=1;fillOpacity=45;" value="BM30 — Tableau de bord financier" vertex="1">
+          <mxGeometry height="116" width="920" x="220" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="U1" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Enregistrer une transaction (revenu ou dépense)" vertex="1">
+          <mxGeometry height="54" width="280" x="250" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="U2" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Modifier une transaction" vertex="1">
+          <mxGeometry height="54" width="280" x="250" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="U3" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Supprimer une transaction" vertex="1">
+          <mxGeometry height="54" width="280" x="250" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="V1" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Recalculer le solde du compte" vertex="1">
+          <mxGeometry height="54" width="300" x="760" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="U4" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Importer un relevé bancaire (CSV)" vertex="1">
+          <mxGeometry height="54" width="280" x="250" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="V2" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Prévisualiser les lignes" vertex="1">
+          <mxGeometry height="54" width="300" x="760" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="V3" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Afficher le récapitulatif de l’import" vertex="1">
+          <mxGeometry height="54" width="300" x="760" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="V6" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Valider l’import" vertex="1">
+          <mxGeometry height="54" width="300" x="760" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="V4" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Signaler les lignes invalides" vertex="1">
+          <mxGeometry height="54" width="300" x="760" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="U5" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Consulter l’historique des transactions" vertex="1">
+          <mxGeometry height="54" width="280" x="250" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="U6" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Filtrer et rechercher les transactions" vertex="1">
+          <mxGeometry height="54" width="280" x="310" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="U7" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Consulter le solde d’un compte" vertex="1">
+          <mxGeometry height="54" width="280" x="250" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="U8" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Consulter le solde global" vertex="1">
+          <mxGeometry height="54" width="280" x="250" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="U9" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Consulter le tableau de bord" vertex="1">
+          <mxGeometry height="54" width="280" x="250" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="V5" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.5;" value="Afficher les dernières transactions" vertex="1">
+          <mxGeometry height="54" width="300" x="760" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="A1" style="html=1;rounded=0;endArrow=none;edgeStyle=entityRelationEdgeStyle;" target="U1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="A1" style="html=1;rounded=0;endArrow=none;edgeStyle=entityRelationEdgeStyle;" target="U2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="A1" style="html=1;rounded=0;endArrow=none;edgeStyle=entityRelationEdgeStyle;" target="U3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="A1" style="html=1;rounded=0;endArrow=none;edgeStyle=entityRelationEdgeStyle;" target="U4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="A1" style="html=1;rounded=0;endArrow=none;edgeStyle=entityRelationEdgeStyle;" target="U5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="A1" style="html=1;rounded=0;endArrow=none;edgeStyle=entityRelationEdgeStyle;" target="U6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="A1" style="html=1;rounded=0;endArrow=none;edgeStyle=entityRelationEdgeStyle;" target="U7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="A1" style="html=1;rounded=0;endArrow=none;edgeStyle=entityRelationEdgeStyle;" target="U8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="A1" style="html=1;rounded=0;endArrow=none;edgeStyle=entityRelationEdgeStyle;" target="U9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="U1" style="html=1;rounded=0;endArrow=open;endSize=10;dashed=1;" target="V1" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="U2" style="html=1;rounded=0;endArrow=open;endSize=10;dashed=1;" target="V1" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="U3" style="html=1;rounded=0;endArrow=open;endSize=10;dashed=1;" target="V1" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="U4" style="html=1;rounded=0;endArrow=open;endSize=10;dashed=1;" target="V2" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="U4" style="html=1;rounded=0;endArrow=open;endSize=10;dashed=1;" target="V3" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="U4" style="html=1;rounded=0;endArrow=open;endSize=10;dashed=1;" target="V6" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="V4" style="html=1;rounded=0;endArrow=open;endSize=10;dashed=1;" target="U4" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="U6" style="html=1;rounded=0;endArrow=open;endSize=10;dashed=1;" target="U5" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="U9" style="html=1;rounded=0;endArrow=open;endSize=10;dashed=1;" target="U8" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="U9" style="html=1;rounded=0;endArrow=open;endSize=10;dashed=1;" target="V5" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
